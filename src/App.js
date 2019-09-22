@@ -18,15 +18,14 @@ import home from './pages/home';
 import login from './pages/login';
 import signup from './pages/signup';
 import user from './pages/user';
-// import myprofile from './pages/myprofile';
+import myprofile from './pages/myprofile';
 
 import axios from 'axios';
-import myprofile from './pages/myprofile';
 
 const theme = createMuiTheme(themeObject);
 
-// axios.defaults.baseURL =
-//   'https://us-central1-social-media-app-72957.cloudfunctions.net/api';
+axios.defaults.baseURL =
+  'https://us-central1-social-media-app-72957.cloudfunctions.net/api';
 
 const token = localStorage.FBIdToken;
 if (token) {
