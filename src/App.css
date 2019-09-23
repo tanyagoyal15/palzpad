@@ -26,18 +26,18 @@ a {
 }
 @media(max-width : 1200px) {
   .c1 {
-    margin-right: 60%;
+    margin-right: 50%;
   }
   .c2 {
-    margin-right: 75%;
+    margin-right: 65%;
   }
 }
 
 @media(max-width : 800px) {
   .c1 {
-    margin-right: 33%;
+    margin-right: 28%;
   }
   .c2 {
-    margin-right: 60%;
+    margin-right: 50%;
   }
 }
