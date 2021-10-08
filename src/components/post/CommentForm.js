@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
+import MyButton from '../../util/MyButton';
 // MUI Stuff
-import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
+import SendIcon from '@material-ui/icons/Send';
 
 // Redux stuff
 import { connect } from 'react-redux';
@@ -46,7 +47,7 @@ class CommentForm extends Component {
 
     const commentFormMarkup = authenticated ? (
       <Grid item sm={12} style={{ textAlign: 'center' }}>
-        <form onSubmit={this.handleSubmit}>
+        <form onSubmit={this.handleSubmit} style={{'display': 'flex'}}>
           <TextField
             name="body"
             type="text"
@@ -58,15 +59,9 @@ class CommentForm extends Component {
             fullWidth
             className={classes.commentTextField}
           />
-          <Button
-            type="submit"
-            variant="contained"
-            color="primary"
-            className={classes.commentButton}
-            // style ={{'position' : 'absolute' , 'right' : '8%' , 'fontSize' : '10px'}}
-          >
-            Comment
-          </Button>
+          <MyButton tip="comment">
+              <SendIcon style={{ 'color': '#00B7F9'}}/>
+          </MyButton>
         </form>
         <hr className={classes.visibleSeparator} />
       </Grid>

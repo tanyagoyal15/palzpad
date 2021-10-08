@@ -24,17 +24,18 @@ import { getPost, clearErrors } from '../../redux/actions/dataActions';
 const styles = (theme) => ({
   ...theme,
   profileImage: {
-    maxWidth: 200,
-    height: 200,
+    maxWidth: 180,
+    height: 100,
     borderRadius: '50%',
     objectFit: 'cover'
   },
   dialogContent: {
-    padding: 20
+    padding: '20px 30px'
   },
   closeButton: {
     position: 'absolute',
-    left: '90%'
+    left: '90%',
+    top: '2%'
   },
   expandButton: {
     position: 'relative',
@@ -95,7 +96,7 @@ class PostDialog extends Component {
 
     const dialogMarkup = loading ? (
       <div className={classes.spinnerDiv}>
-        <CircularProgress size={200} thickness={2} />
+        <CircularProgress size={100} thickness={2} />
       </div>
     ) : (
       <Grid container spacing={16}>
@@ -108,16 +109,16 @@ class PostDialog extends Component {
             color="#000"
             variant="h5"
             to={`/users/${userHandle}`}
-            style={{'fontWeight' : 'bold'}}
+            style={{'fontWeight' : 'bold', 'margin' : '30px 0 0 10px'}}
           >
             @{userHandle}
           </Typography>
           <hr className={classes.invisibleSeparator} />
-          <Typography variant="body2" color="textSecondary">
+          <Typography variant="body2" color="textSecondary" style={{'marginLeft' : '15px'}}>
             {dayjs(createdAt).format('h:mm a, MMMM DD, YYYY')}
           </Typography>
           <hr className={classes.invisibleSeparator} />
-          <Typography variant="body1">{body}</Typography>
+          <Typography variant="body1" style={{'marginLeft' : '15px'}}>{body}</Typography>
           <LikeButton postId={postId} />
           <span>{likeCount} likes</span>
           <MyButton tip="comments">

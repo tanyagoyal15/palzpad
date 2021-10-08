@@ -26,12 +26,18 @@ import ExitToApp from '@material-ui/icons/ExitToApp';
 //Redux
 import { connect } from 'react-redux';
 import { logoutUser, uploadImage } from '../../redux/actions/userActions';
+import Dialog from '@material-ui/core/Dialog';
+import DialogTitle from '@material-ui/core/DialogTitle';
+import DialogActions from '@material-ui/core/DialogActions';
 
 const styles = (theme) => ({
     ...theme
 });
 
 class NavProfile extends Component {
+    state = {
+        open: false
+      };
     handleImageChange = (event) => {
         const image = event.target.files[0];
         const formData = new FormData();
@@ -41,6 +47,12 @@ class NavProfile extends Component {
     handleEditPicture = () => {
         const fileInput = document.getElementById('imageInput');
         fileInput.click();
+    };
+    handleOpen = () => {
+        this.setState({ open: true });
+    };
+    handleClose = () => {
+        this.setState({ open: false });
     };
     handleLogout = () => {
         this.props.logoutUser();
@@ -140,9 +152,27 @@ class NavProfile extends Component {
                             <CalendarToday color="primary" />{' '}
                             <span>Joined {dayjs(createdAt).format('MMM YYYY')}</span> */}
                         </div>
-                        <MyButton tip="Logout" onClick={this.handleLogout}>
+                        <MyButton tip="Logout" onClick={this.handleOpen}>
                             <ExitToApp color="#000" />
                         </MyButton>
+                        <Dialog
+                          open={this.state.open}
+                          onClose={this.handleClose}
+                          fullWidth
+                          maxWidth="sm"
+                        >
+                          <DialogTitle>
+                            Are you sure you want to logout ?
+                          </DialogTitle>
+                          <DialogActions>
+                            <Button onClick={this.handleClose} color="primary">
+                              Cancel
+                            </Button>
+                            <Button onClick={this.handleLogout} color="secondary">
+                              Logout
+                            </Button>
+                          </DialogActions>
+                        </Dialog>
                         {/* <EditDetails /> */}
                     </div>
                 </Paper>
