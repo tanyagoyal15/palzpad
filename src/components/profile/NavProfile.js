@@ -64,7 +64,7 @@ class NavProfile extends Component {
         const {
             classes,
             user: {
-                credentials: { handle, createdAt, imageUrl, bio, website, location },
+                credentials: { handle, imageUrl },
                 loading,
                 authenticated
             }
