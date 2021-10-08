@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import axios from 'axios';
 import Post from '../components/post/Post';
 import Profile from '../components/profile/Profile';
-import StaticProfile from '../components/profile/StaticProfile';
+// import StaticProfile from '../components/profile/StaticProfile';
 import Grid from '@material-ui/core/Grid';
 
 import PostSkeleton from '../util/PostSkeleton';

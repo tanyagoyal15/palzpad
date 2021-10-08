@@ -3,11 +3,11 @@ import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import NoImg from '../images/no-img.png';
 // MUI
-import Paper from '@material-ui/core/Paper';
+// import Paper from '@material-ui/core/Paper';
 // Icons
-import LocationOn from '@material-ui/icons/LocationOn';
-import LinkIcon from '@material-ui/icons/Link';
-import CalendarToday from '@material-ui/icons/CalendarToday';
+// import LocationOn from '@material-ui/icons/LocationOn';
+// import LinkIcon from '@material-ui/icons/Link';
+// import CalendarToday from '@material-ui/icons/CalendarToday';
 
 import Card from '@material-ui/core/Card';
 import CardMedia from '@material-ui/core/CardMedia';

@@ -1,27 +1,27 @@
-import React, { Component, Fragment } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react';
+// import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import withStyles from '@material-ui/core/styles/withStyles';
 import { Link } from 'react-router-dom';
-import dayjs from 'dayjs';
-import EditDetails from './EditDetails';
+// import dayjs from 'dayjs';
+// import EditDetails from './EditDetails';
 import MyButton from '../../util/MyButton';
-import Profile from './Profile';
-import HomeIcon from '@material-ui/icons/Home';
+// import Profile from './Profile';
+// import HomeIcon from '@material-ui/icons/Home';
 
 // import ProfileSkeleton from '../../util/ProfileSkeleton';
 // MUI stuff
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import MuiLink from '@material-ui/core/Link';
+// import MuiLink from '@material-ui/core/Link';
 import Paper from '@material-ui/core/Paper';
 import BootstrapTooltip from '@material-ui/core/Tooltip';
 
 // Icons
-import LocationOn from '@material-ui/icons/LocationOn';
-import LinkIcon from '@material-ui/icons/Link';
-import CalendarToday from '@material-ui/icons/CalendarToday';
-import EditIcon from '@material-ui/icons/Edit';
+// import LocationOn from '@material-ui/icons/LocationOn';
+// import LinkIcon from '@material-ui/icons/Link';
+// import CalendarToday from '@material-ui/icons/CalendarToday';
+// import EditIcon from '@material-ui/icons/Edit';
 import ExitToApp from '@material-ui/icons/ExitToApp';
 //Redux
 import { connect } from 'react-redux';
